@@ -9,7 +9,7 @@ from api.fabfile import (provision_api, create_api_database, drop_api_database,
 
 VIRTUALENV_DIR = 'censusreporter-ke_ve'
 CODE_DIR = 'censusreporter-ke'
-PROD_HOSTS = ['52.34.233.24']
+PROD_HOSTS = ['127.0.0.1:8000']
 PACKAGES = (
     'git-core',
     'python-virtualenv',
@@ -20,9 +20,9 @@ PACKAGES = (
     'npm',  # Node is for yUglify
 )
 # Nginx & Upstart constants
-SERVER_NAMES = '52.34.233.24'
-EMBED_URL = 'ec2-52-34-233-24.us-west-2.compute.amazonaws.com'
-SERVER_ALIASES = '52.34.233.24'
+SERVER_NAMES = ''
+EMBED_URL = '127.0.0.1:8000'
+SERVER_ALIASES = '127.0.0.1:8000'
 PROXY_PORT = 5001
 PROXY_HOST = '127.0.0.1'
 LOG_DIR = 'logs'
